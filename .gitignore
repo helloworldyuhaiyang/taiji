@@ -1,13 +1,12 @@
-
-将删除 .idea/Taiji.iml
-将删除 .idea/misc.xml
-将删除 .idea/modules.xml
-将删除 .idea/vcs.xml
-将删除 .idea/workspace.xml
-将删除 TExcept/CMakeFiles/
-将删除 TExcept/Makefile
-将删除 TExcept/TExcept.cbp
-将删除 TExcept/cmake_install.cmake
-将删除 TRedis/CMakeFiles/
-将删除 TUtil/CMakeFiles/
-将删除 cmake-build-debug/
+.idea/Taiji.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+TExcept/CMakeFiles/
+TExcept/Makefile
+TExcept/TExcept.cbp
+TExcept/cmake_install.cmake
+TRedis/CMakeFiles/
+TUtil/CMakeFiles/
+cmake-build-debug/
