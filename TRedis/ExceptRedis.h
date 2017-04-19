@@ -12,7 +12,7 @@
 #define EXCEPTREDIS_H
 
 #include "redisCommon.h"
-#include "TExcept/Except.h"
+#include "Taiji/TExcept/Except.h"
 
 namespace Taiji {
 namespace TRedis {
