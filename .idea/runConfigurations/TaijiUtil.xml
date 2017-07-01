@@ -1,6 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="TaijiUtil" type="CMakeRunConfiguration" factoryName="Application" singleton="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Taiji" TARGET_NAME="TaijiUtil" CONFIG_NAME="Debug">
-    <envs />
-    <method />
-  </configuration>
-</component>
