@@ -18,7 +18,7 @@ else ()
     message(FATAL_ERROR "other platform: ${CMAKE_SYSTEM_NAME}")
 endif (CMAKE_SYSTEM_NAME MATCHES "Linux")
 
-message(STATUS "current platform: ${PLATEFORM}")
+message(STATUS "============current platform: ${PLATEFORM}\n")
 
 ###########################设置依赖##########################
 #查找依赖头文件
