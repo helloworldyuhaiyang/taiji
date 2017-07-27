@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.9)
+cmake_minimum_required(VERSION 2.8)
 project(Taiji)
 
 
@@ -59,7 +59,7 @@ include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../" "${POCO_INCLUDE_PATH}")
 link_directories("${POCO_LIBRARY_PATH}")
 
 if (PLATEFORM STREQUAL MacOS)
-    set(CMAKE_MACOSX_RPATH 0)
+    set(CMAKE_MACOSX_RPATH 1)
 endif (PLATEFORM STREQUAL MacOS)
 
 

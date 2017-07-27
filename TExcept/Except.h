@@ -26,7 +26,7 @@
     class name : public parent \
     { \
         public: 	\
-            name( const std::string& pErrInfo) \
+            name( const std::string& pErrInfo) noexcept \
             : parent( pErrInfo) \
             { \
             } \
