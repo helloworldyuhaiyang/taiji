@@ -31,24 +31,21 @@ if (NOT POCO_INCLUDE_PATH)
     message(FATAL_ERROR "can not find poco headfile")
 endif (NOT POCO_INCLUDE_PATH)
 
+
+
 #查找依赖库路径
-if (PLATEFORM STREQUAL MacOS)
-    message(STATUS "current platform: ${PLATEFORM}")
-    find_path(POCO_LIBRARY_PATH
-            NAMES libPocoFoundation.dylib
-            PATHS "${POCO_PATH}/lib"
-            )
-else ()
-    find_path(POCO_LIBRARY_PATH
-            NAMES libPocoFoundation.so
-            PATHS "${POCO_PATH}/lib"
-            )
-endif (PLATEFORM STREQUAL MacOS)
+find_library(POCO_LIBRARY_PATH
+        NAMES PocoFoundation
+        PATHS "${POCO_PATH}/lib"
+        )
 
-
+#如果找不到想要的库则终止退出
 if (NOT POCO_LIBRARY_PATH)
     message(FATAL_ERROR "can not find poco library, please set POCO_PATH=\"path of poco\"")
 endif (NOT POCO_LIBRARY_PATH)
+
+#去掉文件名只留路径名
+set(POCO_LIBRARY_PATH ${POCO_PATH}/lib)
 
 message(STATUS "============POCO_INCLUDE_PATH:${POCO_INCLUDE_PATH}")
 message(STATUS "============POCO_LIBRARY_PATH:${POCO_LIBRARY_PATH}")
@@ -58,6 +55,7 @@ include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../" "${POCO_INCLUDE_PATH}")
 #库查找路径
 link_directories("${POCO_LIBRARY_PATH}")
 
+#苹果系统开启 rpath 特性
 if (PLATEFORM STREQUAL MacOS)
     set(CMAKE_MACOSX_RPATH 1)
 endif (PLATEFORM STREQUAL MacOS)
