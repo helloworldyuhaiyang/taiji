@@ -48,5 +48,5 @@ target_link_libraries(${PROJECT_NAME} PocoFoundation PocoNet )
 install(FILES ${HEADFILE} DESTINATION include/Taiji/TRedis)
 
 #设置库文件的安装路径
-install(TARGETS TaijiRedis LIBRARY DESTINATION lib)
+install(TARGETS ${PROJECT_NAME} LIBRARY DESTINATION lb)
 #install(FILES TaijiRedis DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
