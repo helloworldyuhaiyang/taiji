@@ -1,6 +1,6 @@
 
 
-#可以轻松的实现单实例了。
+# 可以轻松的实现单实例了。
 ```
   cpp 文件里显示实例化:
    template class Taiji::TUtil::CSingleton<Taiji::TUtil::CLog, 0>;
@@ -21,7 +21,7 @@
 
 ```
 
-#可以向下面这样的写 http 服务器。
+# 可以向下面这样的写 http 服务器。
 ```
  CHTTPRequestHandlerFactory *factory = new CHTTPRequestHandlerFactory;
     factory->addHandlerAndFun("/url1/handler1", &CHttpHandler1::handleRequest1);
